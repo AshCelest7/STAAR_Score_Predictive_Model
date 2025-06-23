@@ -28,3 +28,29 @@ Polynomial Regression (Degree 2)
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.pipeline import make_pipeline
+
+## 🧪 Approach
+
+- 1. Used Power BI to visualize trends and compute class averages via DAX
+- 2. Chose a polynomial model based on trend dip near Benchmark assessment
+- 3. Trained the model on assessment data and predicted STAAR scores
+ -4. Compared predictions to actual STAAR scores using Python
+
+## 📈 Outcome
+- Predictive model closely mirrored actual STAAR outcomes
+- Enabled early identification of students needing intervention
+- Highlighted the importance of assessment trends for planning
+
+## 🤖 Sample Code
+model = make_pipeline(PolynomialFeatures(degree=2), LinearRegression())
+model.fit(X, y_dummy)
+df['STAAR_Predicted'] = model.predict(X) * 100
+df['Prediction Error'] = df['STAAR_Predicted'] - df['8th Grade STAAR']
+
+##🧩 Future Plans
+- Apply model across all class periods
+- Use benchmark predictions for mid-year interventions
+- Share insights with educators/admin to guide instruction
+
+##🔗 Let's Connect
+Feel free to explore the code and connect on LinkedIn for collaboration or discussion on educational data science!
