@@ -35,6 +35,7 @@ To predict STAAR scores using assessment data collected throughout the 2024–20
 
 - **Polynomial Regression** (degree = 2)  
   - Chosen to reflect nonlinear student performance trends
+  ![Student Trends](student_trend.png)
   - python
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
@@ -51,6 +52,7 @@ from sklearn.pipeline import make_pipeline
 
 ## 📈 Outcome
 - Predictions closely mirrored actual STAAR performance
+![Actual & Predicted Scores Comparison](student_data_safe.png)
 - Enabled early identification of students needing support
 - Provided data-driven insights to guide instruction and reteach plans
 
